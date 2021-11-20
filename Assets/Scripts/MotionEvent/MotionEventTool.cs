@@ -16,12 +16,23 @@ public class MotionEventTool : MonoBehaviour
     [SerializeField]
     private MotionClipSamplingPanel samplingPanel = null;
 
+<<<<<<< Updated upstream
+=======
+    [SerializeField]
+    private MotionEventPanel eventPanel = null;
+
+>>>>>>> Stashed changes
     private GameObject samplingActor = null;
 
     private AnimationClip[] motionClips = null;
 
     private AnimationClip currentClip = null;
 
+<<<<<<< Updated upstream
+=======
+    public float CurrentFrame { private set; get; } = 0f;
+
+>>>>>>> Stashed changes
     void Start()
     {
         motionClips = targetActorAnimator?.runtimeAnimatorController.animationClips;
@@ -49,12 +60,20 @@ public class MotionEventTool : MonoBehaviour
                 currentClip = motionClip;
                 PlaySamplingAnim(0f);
                 samplingPanel.SetSamplingClip(currentClip);
+<<<<<<< Updated upstream
+=======
+                eventPanel.Setup(motionClip, this);
+>>>>>>> Stashed changes
             }
 
             mli.Setup(clipName, () => {
                 currentClip = motionClip;
                 PlaySamplingAnim(0f);
                 samplingPanel.SetSamplingClip(currentClip);
+<<<<<<< Updated upstream
+=======
+                eventPanel.Setup(motionClip, this);
+>>>>>>> Stashed changes
             });
         }
 
@@ -72,6 +91,11 @@ public class MotionEventTool : MonoBehaviour
         }
 
         currentClip.SampleAnimation(samplingActor, targetFrame);
+<<<<<<< Updated upstream
+=======
+
+        CurrentFrame = targetFrame;
+>>>>>>> Stashed changes
     }
 
     
