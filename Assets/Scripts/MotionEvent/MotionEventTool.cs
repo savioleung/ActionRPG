@@ -17,6 +17,12 @@ public class MotionEventTool : MonoBehaviour
     private MotionClipSamplingPanel samplingPanel = null;
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+    [SerializeField]
+    private MotionEventPanel eventPanel = null;
+
+>>>>>>> Stashed changes
 =======
     [SerializeField]
     private MotionEventPanel eventPanel = null;
@@ -29,6 +35,11 @@ public class MotionEventTool : MonoBehaviour
     private AnimationClip currentClip = null;
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+    public float CurrentFrame { private set; get; } = 0f;
+
+>>>>>>> Stashed changes
 =======
     public float CurrentFrame { private set; get; } = 0f;
 
@@ -61,6 +72,10 @@ public class MotionEventTool : MonoBehaviour
                 PlaySamplingAnim(0f);
                 samplingPanel.SetSamplingClip(currentClip);
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+                eventPanel.Setup(motionClip, this);
+>>>>>>> Stashed changes
 =======
                 eventPanel.Setup(motionClip, this);
 >>>>>>> Stashed changes
@@ -71,6 +86,10 @@ public class MotionEventTool : MonoBehaviour
                 PlaySamplingAnim(0f);
                 samplingPanel.SetSamplingClip(currentClip);
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+                eventPanel.Setup(motionClip, this);
+>>>>>>> Stashed changes
 =======
                 eventPanel.Setup(motionClip, this);
 >>>>>>> Stashed changes
@@ -92,6 +111,11 @@ public class MotionEventTool : MonoBehaviour
 
         currentClip.SampleAnimation(samplingActor, targetFrame);
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+
+        CurrentFrame = targetFrame;
+>>>>>>> Stashed changes
 =======
 
         CurrentFrame = targetFrame;
